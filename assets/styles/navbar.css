@@ -1,0 +1,50 @@
+#nav {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navHeight);
+    display: flex;
+    justify-content: center;
+    background-color: var(--background);
+    transition: background-color .3s;
+
+    &.onTop {
+        background-color: transparent;
+    }
+}
+
+.nav-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.nav-navigation {
+    color: var(--grey-text);
+    padding: 30px;
+    gap: 50px;
+
+    @media only screen and (max-width: 767px) {
+        & > span:active {
+            text-decoration: underline;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        & > span:hover {
+            text-decoration: underline;
+        }
+    }
+ }
+
+.nav-logo-container {
+    justify-content: center;
+
+    & > img {
+        height: 100%;
+    }
+}

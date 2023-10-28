@@ -8,8 +8,6 @@ const podcasts = {
     }
 }
 
-const schoolCoordinates = [39.01411507614378, -77.11320239225564]
-
 // Init map
 let map = L.map('map').setView([0, 0], 1);
 
@@ -21,20 +19,16 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Custom icon
 const podcastIcon = L.icon({
-    iconUrl: 'assets/images/podcast.png',
+    iconUrl: 'assets/images/icon-podcast.png',
     iconSize: [30, 30],
 });
 
 const homeIcon = L.icon({
-    iconUrl: 'assets/images/home.png',
+    iconUrl: 'assets/images/icon-home.png',
     iconSize: [30, 30],
     iconAnchor: [15, 25],
     popupAnchor: [0, -10],
 });
-
-// add a marker for school
-let schoolMarker = L.marker(schoolCoordinates, {icon: homeIcon}).addTo(map);
-schoolMarker.bindPopup('Rochambeau the French International School')
 
 // marker for each podcast location
 for (country in podcasts) {

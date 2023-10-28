@@ -1,0 +1,9 @@
+:root {
+    /* colors */
+    --background: hsl(0, 0%, 16%);
+    --accent: hsl(269, 47%, 52%);
+    --grey-text: hsl(0, 0%, 70%);
+
+    /* values */
+    --navHeight: 72px;
+}
