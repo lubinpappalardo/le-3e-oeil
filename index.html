@@ -29,6 +29,7 @@
 
     <script defer src="assets/scripts/map.js"></script>
     <script defer src="assets/scripts/ui.js"></script>
+    <script defer src="assets/scripts/audio-player.js"></script>
 
 </head>
 <body>
@@ -55,12 +56,39 @@
         <div id="cover-image-separator"></div>
     </section>
 
-    <!-- <section class="section" id="section-2">
+    <section class="section" id="section-2">
         <div id="map"></div>
     </section>
 
-    <section class="section" id="section-3"> -->
+    <section class="section" id="section-3">
 
     </section>
+
+
+    <!-- Audio player -->
+    <div id='audio-player-container'>
+
+        <div></div>
+
+        <div id="player-controls-container">
+
+            <div id="player">
+                <button id="play">Play</button>
+                <button id="pause">Pause</button>
+                <audio id="audio" src="assets/podcasts/ukraine-temoignage/podcast.mp3"></audio>
+            </div>
+            
+            <div class="progress-bar-container">
+                <span id="audio-played-time">0:00</span>
+                <span id="progress-bar">
+                    <div id="progress-made-bar"></div>
+                    <div id="progress-btn"></div>
+                </span>
+                <span id='audio-remaining-time'>0:00</span>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
