@@ -15,6 +15,7 @@
     <!-- Fonts and Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/rji6rkl.css"> -->
 
     <!-- Leaflet Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -27,9 +28,10 @@
     <!-- Style and Scripts -->
     <link rel="stylesheet" href="assets/style.css"/>
 
-    <script defer src="assets/scripts/map.js"></script>
+    <!-- <script defer src="assets/scripts/map.js"></script> -->
     <script defer src="assets/scripts/ui.js"></script>
     <script defer src="assets/scripts/audio-player.js"></script>
+
 
 </head>
 <body>
@@ -51,30 +53,45 @@
     <section class="section" id="section-1">
         
         <div class='cover-image-container'>
-            <img id="cover-image" src="assets/podcasts/ukraine-temoignage/cover-image.jpg" alt="Drapeau Ukrainien">
+            <img id="cover-image" src="assets/podcasts/ukraine-temoignage/cover-image.jpg" alt="Drapeau Ukrainien" draggable="false">
         </div>
         <div id="cover-image-separator"></div>
     </section>
 
     <section class="section" id="section-2">
-        <div id="map"></div>
+        <!-- <div id="map"></div> -->
+        Contenu bientôt disponible... :)
     </section>
 
     <section class="section" id="section-3">
-
+        Contenu bientôt disponible... :)
     </section>
 
 
     <!-- Audio player -->
     <div id='audio-player-container'>
 
-        <div></div>
+        <div id="player-informations">
+            <div id="podcast-thumbnail-container"><img id="podcast-thumbnail" src="assets/podcasts/ukraine-temoignage/cover-image.jpg" alt="Drapeau Ukrainien" draggable="false"></div>   
+            <div class='infos'>
+                <div id="podcast-subject"><span class="material-symbols-outlined">flag</span>Conflit Russie-Ukraine</div>
+                <div id='podcast-title'>Théo: Un témoignage Ukrainien</div>
+                <div id="podcast-others">
+                    <div id="podcast-date"><span class="material-symbols-outlined">calendar_month</span>Oct. 2023</div>
+                    <div id="podcast-time"><span class="material-symbols-outlined">schedule</span> 0 min</div>
+                    <div id="podcast-ressources"><span class="material-symbols-outlined">library_books</span>Pour aller + loin...</div>
+                    <div id="podcast-sources"><span class="material-symbols-outlined">info</span> Sources</div>
+                </div>
+            </div>
+        </div>
 
         <div id="player-controls-container">
 
-            <div id="player">
-                <button id="play">Play</button>
-                <button id="pause">Pause</button>
+            <div id="player-controls">
+                <button id="audio-backward"><span class="material-symbols-outlined">replay_10</span></button>
+                <button id="play-pause"><span class="material-symbols-outlined">play_arrow</span></button>
+                <button id="audio-forward"><span class="material-symbols-outlined">forward_10</span></button>
+                
                 <audio id="audio" src="assets/podcasts/ukraine-temoignage/podcast.mp3"></audio>
             </div>
             

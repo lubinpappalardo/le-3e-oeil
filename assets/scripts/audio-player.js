@@ -4,14 +4,31 @@ const audioPlayedTime = document.getElementById('audio-played-time');
 const audioRemainingTime = document.getElementById('audio-remaining-time');
 const madeProgressBar = document.getElementById('progress-made-bar');
 const progressBtn = document.getElementById('progress-btn');
+const podcastTime = document.getElementById('podcast-time');
 
-document.getElementById('play').addEventListener('click', function() {
-  audio.play();
+
+// ---- ---- Play / Pause ---- ----
+
+document.getElementById('play-pause').addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+    this.innerHTML = '<span class="material-symbols-outlined">pause</span>';
+  } else {
+    audio.pause();
+    this.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>';
+  }
 });
 
-document.getElementById('pause').addEventListener('click', function() {
-  audio.pause();
+
+// ---- ---- Forward / Backward ---- ----
+
+document.getElementById('audio-backward').addEventListener('click', function() {
+  audio.currentTime -= 10;
 });
+
+document.getElementById('audio-forward').addEventListener('click', function() {
+  audio.currentTime += 10;
+})
 
 
 // ---- ---- Show audio progression ---- ----
@@ -22,6 +39,7 @@ window.addEventListener('load', function() {
     let minutesDuration = Math.floor(Math.round(audio.duration) / 60);
     let secondsDuration = Math.round(audio.duration) % 60;
     audioRemainingTime.textContent = `${minutesDuration.toString().padStart(2, '0')}:${secondsDuration.toString().padStart(2, '0')}`;
+    podcastTime.innerHTML = `<span class="material-symbols-outlined">schedule</span> ${Math.round(Math.round(audio.duration) / 60).toString().padStart(2, '0')} min`
 })
 
 audio.addEventListener('timeupdate', function() {
