@@ -2,6 +2,7 @@
     /* colors */
     --background: hsl(0, 0%, 16%);
     --lightBackground: hsl(0, 0%, 26%);
+    --lighterBackground: hsl(0, 0%, 36%);
     --accent: hsl(269, 47%, 52%);
     --grey-text: hsl(0, 0%, 70%);
     --text: hsl(0, 0%, 90%);

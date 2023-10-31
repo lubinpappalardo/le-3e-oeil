@@ -93,6 +93,7 @@ window.addEventListener('touchmove', dragMove);
 
 function dragMove(e) {
   if (isDraggingAudioCurrentTime) {
+    e.preventDefault();
     let x = e.clientX || e.touches[0].clientX;
     let progress = (x - dragStartX) / progressBar.offsetWidth;
     audio.currentTime = dragStartAudioCurrentTime + (progress * audio.duration);

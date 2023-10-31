@@ -125,7 +125,7 @@
     margin-bottom: 5px;
 }
 
-#podcast-sources {
+#podcast-sources-open {
     position: absolute;
     display: flex;
     align-items: center;
@@ -140,6 +140,10 @@
     &:hover {
         background-color: var(--lightBackground);
     }
+}
+
+body:has(#podcast-sources.open) #podcast-sources-open {
+    background-color: var(--lightBackground);
 }
 
 #player-controls button {

@@ -2,6 +2,7 @@
 @import "styles/navbar.css";
 @import "styles/audio-player.css";
 @import "styles/section1.css";
+@import "styles/popups.css";
 
 * {
     box-sizing: border-box;
