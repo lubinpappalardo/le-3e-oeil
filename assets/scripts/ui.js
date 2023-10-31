@@ -10,11 +10,3 @@ window.addEventListener('scroll', () => {
         nav.classList.add('onTop');
     }
 })
-
-// Podcast sources
-const podcastSourcesBtn = document.getElementById('podcast-sources-open');
-const podcastSources = document.getElementById('podcast-sources');
-
-podcastSourcesBtn.addEventListener('click', () => {
-    podcastSources.classList.toggle('open');
-})

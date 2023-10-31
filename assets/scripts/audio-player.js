@@ -1,4 +1,3 @@
-const audio = document.getElementById('audio');
 const progressBar = document.getElementById('progress-bar');
 const audioPlayedTime = document.getElementById('audio-played-time');
 const audioRemainingTime = document.getElementById('audio-remaining-time');

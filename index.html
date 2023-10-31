@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="assets/style.css"/>
 
     <!-- <script defer src="assets/scripts/map.js"></script> -->
+    <script defer src="assets/scripts/podcastsDict.js"></script>
+    <script defer src="assets/scripts/podcast.js"></script>
     <script defer src="assets/scripts/ui.js"></script>
     <script defer src="assets/scripts/audio-player.js"></script>
-
 
 </head>
 <body>
@@ -51,9 +52,9 @@
 
 
     <section class="section" id="section-1">
-        
+
         <div class='cover-image-container'>
-            <img id="cover-image" src="assets/podcasts/ukraine-temoignage/cover-image.jpg" alt="Drapeau Ukrainien" draggable="false">
+            <img id="cover-image" src="" alt="" draggable="false">
         </div>
         <div id="cover-image-separator"></div>
     </section>
@@ -75,14 +76,14 @@
     <div id='audio-player-container'>
 
         <div id="player-informations">
-            <div id="podcast-thumbnail-container"><img id="podcast-thumbnail" src="assets/podcasts/ukraine-temoignage/cover-image.jpg" alt="Drapeau Ukrainien" draggable="false"></div>   
+            <div id="podcast-thumbnail-container"><img id="podcast-thumbnail" src="" alt="" draggable="false"></div>   
             <div class='infos'>
-                <div id="podcast-subject"><span class="material-symbols-outlined">flag</span>Conflit Russie-Ukraine</div>
-                <div id='podcast-title'>Théo: Un témoignage Ukrainien</div>
+                <div id="podcast-subject"><span class="material-symbols-outlined">flag</span>unknown</div>
+                <div id='podcast-title'>unknown</div>
                 <div id="podcast-others">
-                    <div id="podcast-date"><span class="material-symbols-outlined">calendar_month</span>Oct. 2023</div>
-                    <div id="podcast-time"><span class="material-symbols-outlined">schedule</span> 0 min</div>
-                    <div id="podcast-ressources"><span class="material-symbols-outlined">library_books</span>Pour aller + loin...</div>
+                    <div id="podcast-date"><span class="material-symbols-outlined">calendar_month</span>unknown</div>
+                    <div id="podcast-time"><span class="material-symbols-outlined">schedule</span>0 min</div>
+                    <div id="podcast-ressources-open"><span class="material-symbols-outlined">library_books</span>Pour aller + loin...</div>
                 </div>
             </div>
         </div>
@@ -96,7 +97,7 @@
                 <button id="play-pause"><span class="material-symbols-outlined">play_arrow</span></button>
                 <button id="audio-forward"><span class="material-symbols-outlined">forward_10</span></button>
                 
-                <audio id="audio" src="assets/podcasts/ukraine-temoignage/podcast.mp3"></audio>
+                <audio id="audio" src=""></audio>
             </div>
             
             <div class="progress-bar-container">
@@ -119,20 +120,18 @@
         <div id="podcast-sources-container">
             <h3><span class="material-symbols-outlined">info</span>Ressources du podcast</h3>
             <div class='sources-separator'><p>Image de couverture</p></div>
-            <p id="cover-image-source">
-                <a href='https://www.pexels.com/photo/close-up-shot-of-the-flag-of-ukraine-11421120/' target="_blank" rel='noopener'><span class="material-symbols-outlined">open_in_new</span></a> 
-                Close up of the flag of Ukraine - Mathias Reding
-            </p>
+            <div id="cover-image-source"></div>
             <div class='sources-separator'><p>Musiques</p></div>
-            <p>
-                <a href='https://www.auboutdufil.com/index.php?id=567' target="_blank" rel='noopener'><span class="material-symbols-outlined">open_in_new</span></a> 
-                Uncatchable - AlexandrZhelanov<br>
-            </p>
+            <div id="music-source"></div>
             <div class='sources-separator'><p>Effets sonores (SFX)</p></div>
-            <p>
-                <a href='https://pixabay.com/sound-effects/' target="_blank" rel='noopener'><span class="material-symbols-outlined">open_in_new</span></a> 
-                Pixabay
-            </p>
+            <div id="sfx-source"></div>
+        </div>
+    </div>
+
+    <div id="podcast-ressources">
+        <div id="podcast-ressources-container">
+            <h3><span class="material-symbols-outlined">library_books</span>Pour en savoir plus...</h3>
+            <div id="ressources"></div>
         </div>
     </div>
 

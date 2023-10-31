@@ -83,7 +83,7 @@
         }
     }
 
-    & #podcast-ressources {
+    & #podcast-ressources-open {
         position: relative;
         padding: 5px 8px;
         border-radius: 20px;
@@ -143,6 +143,10 @@
 }
 
 body:has(#podcast-sources.open) #podcast-sources-open {
+    background-color: var(--lightBackground);
+}
+
+body:has(#podcast-ressources.open) #podcast-ressources-open {
     background-color: var(--lightBackground);
 }
 

@@ -1,29 +1,48 @@
-#podcast-sources {
+#podcast-sources, 
+#podcast-ressources {
     position: fixed;
     z-index: 8888;
+
     --margin: calc(0.05 * (100vh - var(--audio-player-container-height)));
-    top: var(--margin);
-    right: var(--margin);
-    width: calc(30% - var(--margin));
-    height: calc(0.9 * (100% - var(--audio-player-container-height)));
 
     overflow: hidden;
     
-    transform: translate(100%, 100%);
     border-radius: 50%;
     transition: transform .3s, border-radius .3s;
+
 
     &.open {
         transform: none;
         border-radius: 0;
 
-        & #podcast-sources-container {
+        & #podcast-sources-container, & #podcast-ressources-container {
             transform: scale(1);
+        }
+
+        &#podcast-ressources {
+            transform: translate(-50%, -50%);
         }
     }
 }
 
-#podcast-sources-container {
+#podcast-sources {
+    top: var(--margin);
+    right: var(--margin);
+    width: calc(30% - var(--margin));
+    height: calc(0.9 * (100% - var(--audio-player-container-height)));
+    transform: translate(100%, 100%);
+}
+
+#podcast-ressources {
+    top: calc(0.5 * (100% - var(--audio-player-container-height)));
+    left: 50%;
+    width: 50%;
+    min-width: 300px;
+    height: calc(0.5 * (100% - var(--audio-player-container-height)));
+    transform: translate(-50%, 200%);
+}
+
+#podcast-sources-container, #podcast-ressources-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -53,15 +72,31 @@
         color: var(--text);
     }
 
-    & > p {
+    & > div:not(.sources-separator) {
         font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+
+        & > p {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            cursor: pointer;
+
+            &:hover > a > span {
+                color: var(--accent);
+            }
+        }
 
         & a {
             display: flex;
             align-items: center;
             text-decoration: none;
 
-            & span {
+            & > span {
                 font-size: 20px;
                 color: var(--lighterBackground);
             }
