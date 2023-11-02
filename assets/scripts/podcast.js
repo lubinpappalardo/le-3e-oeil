@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openedPodcast = podcastsDict[Object.keys(podcastsDict)[0]];
 
     setPodcast();
+    setCoverPodcast();
 });
 
 
@@ -51,6 +52,22 @@ function setPodcast() {
     // set main page informations
     document.getElementById('cover-image').src = openedPodcast.thumbnail_path;
     document.getElementById('cover-image').alt = openedPodcast.sources.cover_image.image_title;
+}
+
+
+function setCoverPodcast() {
+    document.getElementById('cover-image').src = openedPodcast.thumbnail_path;
+    document.getElementById('cover-image').alt = openedPodcast.sources.cover_image.image_title;
+    document.getElementById('cover-podcast-subject').innerHTML = `<span class="material-symbols-outlined">flag</span>${openedPodcast.subject}`;
+    document.getElementById('cover-podcast-title').innerText = openedPodcast.title;
+    document.getElementById('cover-podcast-description').innerText = openedPodcast.description;
+    document.getElementById('cover-podcast-date').innerHTML = `<span class="material-symbols-outlined">calendar_month</span>${openedPodcast.date}`;
+
+    // get the duration of the audio file at openedPodcast.podcast_path
+    let podcastAudioFile = new Audio(openedPodcast.podcast_path);
+    podcastAudioFile.addEventListener('loadedmetadata', function() {
+        document.getElementById('cover-podcast-time').innerHTML = '<span class="material-symbols-outlined">schedule</span> ' + Math.round(podcastAudioFile.duration / 60) + ' min';
+    });
 }
 
 

@@ -2,6 +2,7 @@ const podcastsDict = {
     "Théo: Un témoignage Ukrainien": {
         title: "Théo: Un témoignage Ukrainien",
         subject: "Conflit Russie-Ukraine",
+        description: `Ce premier épisode du "3ème oeil" nous emmène en Ukraine… ou presque. C'est par le témoignage de Théo, jeune franco-ukrainien de 20 ans, parti faire ses études en France, que nous sommes partis en quête de clés de compréhension du conflit. Dans cet échange, la guerre a été abordée à travers la question du conflit générationnel, des relations entre Russie et Ukraine, à court et long terme et du traumatisme subi par les enfants. C'est donc le regard d'un seul témoin, d'une jeunesse qui a fui Kiev en mars 2022, des parcours faits d'allers-retours vers ce pays aime et quitte à regret.`,
         podcast_path: "assets/podcasts/theo-un-temoignage-ukrainien/podcast-theo-temoignage-ukrainien.mp3",
         thumbnail_path: "assets/podcasts/theo-un-temoignage-ukrainien/drapeau-ukraine.jpg",
         date: "Oct. 2023",

@@ -37,13 +37,17 @@
 </head>
 <body>
 
+    <!--------------------------------------------------------
+                            Navbar
+    --------------------------------------------------------->
+
     <nav id="nav">
         <div class="nav-section nav-navigation">
-            <span>Podcasts</span>
-            <span>À propos</span>
+            <span onclick="document.getElementById('podcasts').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">Podcasts</span>
+            <span onclick="document.getElementById('about-us').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">À propos</span>
         </div>
         <div class="nav-section nav-logo-container">
-            <img src='assets/images/logo-full.png' alt="Logo: Le 3e œuil">
+            <img onclick="document.getElementById('cover-page').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });" src='assets/images/logo-full.png' alt="Logo: Le 3e œuil" draggable="false">
         </div>
         <div class='nav-section nav-blank-space'>
 
@@ -51,20 +55,46 @@
     </nav>
 
 
-    <section class="section" id="section-1">
+    <!--------------------------------------------------------
+                    Section 1 : Cover page
+    --------------------------------------------------------->
+
+    <section class="section" id="cover-page">
+
+        <div class='cover-infos-container'>
+            <div id='cover-podcast-tag'><span class="material-symbols-outlined">auto_awesome</span>NEW</div>
+            <div id='cover-podcast-subject'></div>
+            <div id='cover-podcast-title'></div>
+            <div id='cover-podcast-description'></div>
+            <div id='cover-podcast-others'>
+                <div id='cover-podcast-date'></div>
+                <div id='cover-podcast-time'></div>
+            </div>
+        </div>
 
         <div class='cover-image-container'>
             <img id="cover-image" src="" alt="" draggable="false">
         </div>
-        <div id="cover-image-separator"></div>
     </section>
 
-    <section class="section" id="section-2">
+
+    <!--------------------------------------------------------
+                    Section 2 : Podcasts
+    --------------------------------------------------------->
+
+
+    <section class="section" id="podcasts">
         <!-- <div id="map"></div> -->
         Contenu bientôt disponible... :)
     </section>
 
-    <section class="section" id="section-3">
+
+    <!--------------------------------------------------------
+                    Section 3 : About us
+    --------------------------------------------------------->
+
+
+    <section class="section" id="about-us">
         Contenu bientôt disponible... :)
     </section>
     

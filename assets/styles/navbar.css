@@ -29,6 +29,10 @@
     padding: 30px;
     gap: 50px;
 
+    & > span {
+        cursor: pointer;
+    }
+
     @media only screen and (max-width: 767px) {
         & > span:active {
             text-decoration: underline;
@@ -46,5 +50,6 @@
 
     & > img {
         height: 100%;
+        cursor: pointer;
     }
 }

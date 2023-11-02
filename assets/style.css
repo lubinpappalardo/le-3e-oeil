@@ -1,7 +1,7 @@
 @import "styles/root.css";
 @import "styles/navbar.css";
 @import "styles/audio-player.css";
-@import "styles/section1.css";
+@import "styles/cover-page.css";
 @import "styles/popups.css";
 
 * {
@@ -32,12 +32,12 @@ body {
     color: var(--text);
 } 
 
-#section-2 {
+#podcasts {
     background-color: white;
     color: black;
 }
 
-#section-2, #section-3 {
+#podcasts, #about-us {
     display: grid;
     place-items: center;
 }
@@ -45,4 +45,33 @@ body {
 #map {
     width: 600px;
     height: 400px;
+}
+
+/*-------- SCROLLBAR --------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border: none;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 12px;
+    border: none;
+    z-index: -1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--accent); 
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accentLight); 
 }

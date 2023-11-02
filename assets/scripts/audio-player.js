@@ -5,6 +5,14 @@ const madeProgressBar = document.getElementById('progress-made-bar');
 const progressBtn = document.getElementById('progress-btn');
 const podcastTime = document.getElementById('podcast-time');
 
+// set audio time
+audio.addEventListener('loadedmetadata', function() {
+  let minutesDuration = Math.floor(Math.round(audio.duration) / 60);
+  let secondsDuration = Math.round(audio.duration) % 60;
+  audioRemainingTime.textContent = `${minutesDuration.toString().padStart(2, '0')}:${secondsDuration.toString().padStart(2, '0')}`;
+  podcastTime.innerHTML = `<span class="material-symbols-outlined">schedule</span> ${Math.round(Math.round(audio.duration) / 60).toString().padStart(2, '0')} min`
+});
+
 
 // ---- ---- Play / Pause ---- ----
 
@@ -31,15 +39,6 @@ document.getElementById('audio-forward').addEventListener('click', function() {
 
 
 // ---- ---- Show audio progression ---- ----
-
-// on ready set audio time
-window.addEventListener('load', function() {
-    audioPlayedTime.textContent = '0:00';
-    let minutesDuration = Math.floor(Math.round(audio.duration) / 60);
-    let secondsDuration = Math.round(audio.duration) % 60;
-    audioRemainingTime.textContent = `${minutesDuration.toString().padStart(2, '0')}:${secondsDuration.toString().padStart(2, '0')}`;
-    podcastTime.innerHTML = `<span class="material-symbols-outlined">schedule</span> ${Math.round(Math.round(audio.duration) / 60).toString().padStart(2, '0')} min`
-})
 
 audio.addEventListener('timeupdate', function() {
     let totalSecondsRemaining = Math.floor(Math.round(audio.duration) - Math.round(audio.currentTime));
