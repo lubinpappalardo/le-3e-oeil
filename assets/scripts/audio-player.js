@@ -62,25 +62,20 @@ audio.addEventListener('timeupdate', function() {
 
 // ---- ---- Change audio progression ---- ----
 
-progressBar.addEventListener('click', function(e) {
-  // check target isn't progress btn
-  if (e.target === progressBtn) {
-    return;
-  }
-  let rect = progressBar.getBoundingClientRect();
-  let x = e.clientX - rect.left;
-  let progress = x / rect.width;
-  audio.currentTime = progress * audio.duration;
-});
-
 let dragStartX = 0;
 let dragStartAudioCurrentTime = 0;
 let isDraggingAudioCurrentTime = false;
 
-progressBtn.addEventListener('mousedown', dragStart);
-progressBtn.addEventListener('touchstart', dragStart);
+progressBar.addEventListener('mousedown', dragStart);
+progressBar.addEventListener('touchstart', dragStart);
 
 function dragStart(e) {
+  if (e.target !== progressBtn) {
+    let rect = progressBar.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let progress = x / rect.width;
+    audio.currentTime = progress * audio.duration;
+  }
   dragStartX = e.clientX || e.touches[0].clientX;
   dragStartAudioCurrentTime = audio.currentTime;
   isDraggingAudioCurrentTime = true;

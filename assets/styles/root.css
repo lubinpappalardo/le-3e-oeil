@@ -11,4 +11,8 @@
     /* values */
     --navHeight: 72px;
     --audio-player-container-height: 120px;
+
+    @media only screen and (max-width: 767px) {
+        --audio-player-container-height: 230px;
+    }
 }

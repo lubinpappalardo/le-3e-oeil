@@ -41,17 +41,21 @@
                             Navbar
     --------------------------------------------------------->
 
-    <nav id="nav">
+    <nav id="nav">  
+        <div class="nav-section nav-navigation-mobile">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+
         <div class="nav-section nav-navigation">
             <span onclick="document.getElementById('podcasts').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">Podcasts</span>
             <span onclick="document.getElementById('about-us').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">À propos</span>
         </div>
+        
         <div class="nav-section nav-logo-container">
             <img onclick="document.getElementById('cover-page').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });" src='assets/images/logo-full.png' alt="Logo: Le 3e œuil" draggable="false">
         </div>
-        <div class='nav-section nav-blank-space'>
 
-        </div>
+        <div class='nav-section nav-blank-space'></div>
     </nav>
 
 

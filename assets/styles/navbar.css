@@ -53,3 +53,21 @@
         cursor: pointer;
     }
 }
+
+.nav-navigation-mobile {
+    display: none;
+    padding-left: 20px;
+    color: var(--text);
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-blank-space {
+        display: none;
+    }
+    .nav-navigation {
+        display: none;
+    }
+    .nav-navigation-mobile {
+        display: flex;
+    }
+}
