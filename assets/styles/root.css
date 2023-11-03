@@ -12,7 +12,7 @@
     --navHeight: 72px;
     --audio-player-container-height: 120px;
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 1040px) {
         --audio-player-container-height: 230px;
     }
 }

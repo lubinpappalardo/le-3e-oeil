@@ -67,7 +67,7 @@ let dragStartAudioCurrentTime = 0;
 let isDraggingAudioCurrentTime = false;
 
 progressBar.addEventListener('mousedown', dragStart);
-progressBar.addEventListener('touchstart', dragStart);
+progressBar.addEventListener('touchstart', dragStart, { passive: false });
 
 function dragStart(e) {
   if (e.target !== progressBtn) {
@@ -82,7 +82,7 @@ function dragStart(e) {
 }
 
 window.addEventListener('mousemove', dragMove);
-window.addEventListener('touchmove', dragMove);
+window.addEventListener('touchmove', dragMove, { passive: false });
 
 function dragMove(e) {
   if (isDraggingAudioCurrentTime) {
