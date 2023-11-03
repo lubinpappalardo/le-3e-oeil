@@ -10,3 +10,8 @@ window.addEventListener('scroll', () => {
         nav.classList.add('onTop');
     }
 })
+
+// open mobile navigation
+document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('opened');
+});

@@ -41,9 +41,14 @@
                             Navbar
     --------------------------------------------------------->
 
+    <div id='mobile-menu'>
+        <span onclick="document.getElementById('podcasts').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">Podcasts</span>
+        <span onclick="document.getElementById('about-us').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });">À propos</span>
+    </div>
+
     <nav id="nav">  
         <div class="nav-section nav-navigation-mobile">
-            <span class="material-symbols-outlined">menu</span>
+            <span id="mobile-menu-btn" class="material-symbols-outlined">menu</span>
         </div>
 
         <div class="nav-section nav-navigation">
