@@ -13,6 +13,6 @@
     --audio-player-container-height: 120px;
 
     @media only screen and (max-width: 1040px) {
-        --audio-player-container-height: 230px;
+        --audio-player-container-height: 160px;
     }
 }
